@@ -11,3 +11,6 @@ target/
 .classpath
 .project
 Servers/
+
+# Local
+/src/main/java/Z_origin/

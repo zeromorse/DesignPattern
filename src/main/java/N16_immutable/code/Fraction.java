@@ -1,4 +1,4 @@
-package N16_Immutable.code;
+package N16_immutable.code;
 
 /**
  * 分数(假分数)

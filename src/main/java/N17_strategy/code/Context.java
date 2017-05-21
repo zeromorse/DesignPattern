@@ -1,4 +1,4 @@
-package N17_Strategy.code;
+package N17_strategy.code;
 
 /**
  * 环境角色

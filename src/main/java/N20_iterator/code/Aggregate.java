@@ -9,6 +9,6 @@ package N20_iterator.code;
 public abstract class Aggregate<T> {
 
     public Iterator<T> createIterator() {
-        return null;
+        throw new UnsupportedOperationException();
     }
 }

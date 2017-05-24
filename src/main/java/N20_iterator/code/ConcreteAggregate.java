@@ -6,10 +6,20 @@ package N20_iterator.code;
  * @author Zero
  * @created 2017/5/23 15:40
  */
-public class ConcreteAggregate extends Aggregate<String> {
-    private String[] strs = {"Monk Tang", "Monkey", "Pigsy", "Sandy", "Horse"};
+public class ConcreteAggregate<T> extends Aggregate<T> {
 
-    public Iterator<String> createIterator() {
+    @SafeVarargs
+    public static <T> Aggregate<T> of(T... objs) {
+        return new ConcreteAggregate<>(objs);
+    }
+
+    private ConcreteAggregate(T[] objs) {
+        this.objs = objs;
+    }
+
+    private T[] objs;
+
+    public Iterator<T> createIterator() {
         return new ConcreteIterator();
     }
 
@@ -19,7 +29,7 @@ public class ConcreteAggregate extends Aggregate<String> {
      * @author Zero
      * @created 2017/5/23 15:42
      */
-    private class ConcreteIterator implements Iterator<String> {
+    private class ConcreteIterator implements Iterator<T> {
         private int index = 0;
 
         public void first() {
@@ -27,15 +37,15 @@ public class ConcreteAggregate extends Aggregate<String> {
         }
 
         public void next() {
-            if (index < strs.length) index++;
+            if (index < objs.length) index++;
         }
 
         public boolean isDone() {
-            return index >= strs.length;
+            return index >= objs.length;
         }
 
-        public String currentItem() {
-            return strs[index];
+        public T currentItem() {
+            return objs[index];
         }
     }
 }

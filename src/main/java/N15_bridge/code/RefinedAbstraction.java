@@ -8,10 +8,14 @@ package N15_bridge.code;
  */
 public class RefinedAbstraction extends Abstraction {
 
+    public RefinedAbstraction(Implementor impl) {
+        super(impl);
+    }
+
     // 某个商业方法的修正抽象化角色实现
     @Override
     public void operation() {
-        System.out.println("I have better override.");
-        // improved logic
+        super.operation();
+        System.out.println("I still have something to say.");
     }
 }

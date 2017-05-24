@@ -9,6 +9,10 @@ package N15_bridge.code;
 abstract public class Abstraction {
     protected Implementor impl;
 
+    public Abstraction(Implementor impl) {
+        this.impl = impl;
+    }
+
     // 某个商业方法
     public void operation() {
         impl.operationImpl();

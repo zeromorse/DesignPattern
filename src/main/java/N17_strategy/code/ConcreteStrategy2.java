@@ -6,10 +6,11 @@ package N17_strategy.code;
  * @author Zero
  * @created 2017/5/20 15:48
  */
-public class ConcreteStrategy implements Strategy {
+public class ConcreteStrategy2 implements Strategy {
     /**
      * 策略方法
      */
     public void strategyInterface() {
+        System.out.println("ConcreteStrategy2");
     }
 }

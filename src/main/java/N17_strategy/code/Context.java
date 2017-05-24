@@ -13,6 +13,11 @@ public class Context {
      * 策略方法
      */
     public void contextInterface() {
+        System.out.println("Choosing strategy finish.");
         strategy.strategyInterface();
+    }
+
+    public void setStrategy(Strategy strategy) {
+        this.strategy = strategy;
     }
 }

@@ -8,6 +8,6 @@ package N24_state.code;
  */
 public class ConcreteState implements State {
     public void sampleOperation() {
-
+        System.out.println("One of the states.");
     }
 }

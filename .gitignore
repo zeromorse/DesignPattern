@@ -12,5 +12,5 @@ target/
 .project
 Servers/
 
-# Local
-/src/main/java/Z_origin/
+# MAC OS
+.DS_Store
